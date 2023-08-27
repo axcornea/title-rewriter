@@ -2,8 +2,6 @@ chrome.storage.sync.get(["matchingWebsites", "customTitle"], (data) => {
     const matchingWebsites = data.matchingWebsites || [];
     const customTitle = data.customTitle || "NSFW";
 
-    console.log("HEREHERE", matchingWebsites, customTitle);
-
     if (matchingWebsites.some(pattern => window.location.href.includes(pattern))) {
         document.title = customTitle;
 
