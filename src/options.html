@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <h1 class="heading">nsfw-title-rewrite extension settings</h1>
+
+    <div class="option">
+        <h2 class="option__title">Matching websites</h2>
+        <div class="option__description">
+            Enter each domain or subpath on a new line. Exclude 'www.' or 'http://'. For example:
+            <ul>
+                <li>example.com</li>
+                <li>example.com/nsfw/subpath</li>
+            </ul>
+            Titles will be rewritten for pages matching these domains or subpaths.
+        </div>
+        <textarea id="matching-websites" class="option__input"></textarea>
+    </div>
+
+    <div class="option">
+        <h2 class="option__title">Custom title</h2>
+        <div class="option__description">
+            Enter the custom title you want to display on matching tabs (e.g., Twitter).
+        </div>
+        <input class="option__input" type="text" id="custom-title" placeholder="Enter custom title">
+    </div>
+
+    <button class="save-settings" id="save">Save</button>
+
+    <script src="options.js"></script>
+</body>
+
+</html>

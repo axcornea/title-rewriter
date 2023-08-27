@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "nfsw-title-rewrite",
+    "version": "1.0",
+    "description": "Renames tab title on NSFW websites.",
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "options_page": "options.html",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "nfsw-title-rewrite@acriox.me",
+            "strict_min_version": "53.0"
+        }
+    }
+}
